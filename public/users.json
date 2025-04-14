@@ -1,18 +1,37 @@
 [
     {
       "username": "lionelmorgan",
-      "password": "password123"
+      "password": "password123",
+      "profile":"/images/8.jpg"
     },
     {
-      "username": "broncosfan",
-      "password": "password321"
+      "username": "millieram",
+      "password": "helloworld",
+      "profile":"/images/1.jpg"
     },
     {
-      "username": "fredflintstone",
-      "password": "dino456"
+      "username": "daxfrenz",
+      "password": "dino456",
+      "profile":"/images/5.jpg"
     },
     {
-      "username": "bugsbunny",
-      "password": "carrots789"
+      "username": "jstats",
+      "password": "asdfg235",
+      "profile":"/images/7.jpg"
+    },
+    {
+      "username": "ezy",
+      "password": "etoday123",
+      "profile":"/images/4.jpg"
+    },
+    {
+      "username": "emwest",
+      "password": "qwerty345",
+      "profile":"/images/2.jpg"
+    },
+    {
+      "username": "chasezets",
+      "password": "carrots789",
+      "profile":"/images/6.jpg"
     }
   ]

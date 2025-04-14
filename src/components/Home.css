@@ -1,0 +1,19 @@
+#add-post-btn{
+    border-radius: 50%;
+    height: 45px;
+    width: 45px;
+    margin-left: 85%;
+    font-weight: bold;
+    color: white;
+    background-color: rgb(74, 23, 23);
+}
+
+#add-post-btn:hover{
+    border-radius: 50%;
+    height: 45px;
+    width: 45px;
+    margin-left: 85%;
+    font-weight: bold;
+    color: white;
+    background-color: rgb(29, 136, 31);
+}

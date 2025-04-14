@@ -54,6 +54,24 @@
         },
         "comment": "Cool!",
         "created": "5 minutes ago"
+      },
+      {
+        "id": "3",
+        "user": {
+          "username": "lionelmorgan",
+          "profile": "/images/8.jpg"
+        },
+        "comment": "Amazing!",
+        "created": "just now"
+      },
+      {
+        "id": "4",
+        "user": {
+          "username": "lionelmorgan",
+          "profile": "/images/8.jpg"
+        },
+        "comment": "Nice!",
+        "created": "just now"
       }
     ],
     "likes": 5,
@@ -89,10 +107,19 @@
       {
         "id": "3",
         "user": {
-          "username": "currentUsername",
-          "profile": "currentUserProfile"
+          "username": "lionelmorgan",
+          "profile": "/images/8.jpg"
         },
-        "comment": "Very Scenic!",
+        "comment": "You should see it in person",
+        "created": "just now"
+      },
+      {
+        "id": "4",
+        "user": {
+          "username": "lionelmorgan",
+          "profile": "/images/8.jpg"
+        },
+        "comment": "Amazing!",
         "created": "just now"
       }
     ],
@@ -100,5 +127,29 @@
     "image": "/images/auroraborealis.jpg",
     "description": "The phenomenal aurora borealis",
     "created": "3 hrs ago"
+  },
+  {
+    "id": "4",
+    "user": {
+      "username": "lionelmorgan",
+      "profile": "/images/8.jpg"
+    },
+    "comments": [],
+    "likes": 0,
+    "image": "/images/1744606035231-denverbroncos.jpg",
+    "description": "Denver Broncos",
+    "created": "just now"
+  },
+  {
+    "id": "5",
+    "user": {
+      "username": "lionelmorgan",
+      "profile": "/images/8.jpg"
+    },
+    "comments": [],
+    "likes": 0,
+    "image": "/images/1744606196336-ncmountains.jpg",
+    "description": "Visited the NC Mountains this week :)",
+    "created": "just now"
   }
 ]

@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import Login from './Login';
 import './Posts.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faComment, faThumbsUp } from '@fortawesome/free-solid-svg-icons';
@@ -40,17 +41,17 @@ const Posts = () => {
 
     const handleAddComment = async (postId) => {
         if (!newComment.trim()) return; // Don't add empty comments
-        
+        const currentUser = JSON.parse(localStorage.getItem('currentUser'));
         // Construct comment data
         const commentData = {
             postId,
             comment: newComment,
-            username: 'currentUsername',  // Replace with actual username from your app
-            profile: 'currentUserProfile'  // Replace with actual profile image URL from your app
+            username: currentUser.username,  // Replace with actual username from your app
+            profile: currentUser.profile  // Replace with actual profile image URL from your app
         };
 
         try {
-            // Send POST request to server
+            // Send POST request to Express server add-comment endpoint
             const response = await fetch('http://localhost:5000/add-comment', {  // Use full URL for development
                 method: 'POST',
                 headers: {
@@ -139,7 +140,7 @@ const Posts = () => {
                                 <div className="comments-section">
                                     {post.comments && post.comments.map((comment) => (
                                         <div key={comment.id} className="comment">
-                                            <p><strong>{comment.user.username}</strong>: {comment.comment}</p>
+                                            <p><img src={comment.user.profile}/><strong>{comment.user.username}</strong>: {comment.comment}</p>
                                             <small>{comment.created}</small>
                                         </div>
                                     ))}

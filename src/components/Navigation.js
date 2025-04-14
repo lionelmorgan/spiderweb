@@ -1,5 +1,6 @@
 import React from 'react';
 import './Navigation.css';
+import './Login';
 import { Link } from 'react-router-dom';
 import { useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -18,16 +19,18 @@ const Navigation = ({ username }) => {
     setDropdownVisible(false);
   };
 
+  const currentUser = JSON.parse(localStorage.getItem('currentUser'));
+
   return (
     <nav className="navbar-spider">
       <div className="navbar-brand-spider">
         <span id="nav-title"><b>SPIDER</b>WEB</span>
       </div>
       <div className="navbar-toggle">
-        <span>{username}</span>
+        <span>{currentUser.username}</span>
         <img
           className="img-nav"
-          src={require('../images/8.jpg')}
+          src={currentUser.profile}
           alt="User"
           onClick={toggleDropdown}
         />
@@ -52,7 +55,7 @@ const Navigation = ({ username }) => {
             <FontAwesomeIcon icon={faUser} />
             <span id="link-text">Profile</span>
           </Link>
-          <Link to="/chat" onClick={handleDropdownClose}>
+          <Link to="/chatroom" onClick={handleDropdownClose}>
            <FontAwesomeIcon icon={faMessage} />
            <span id="link-text">Chat</span>
           </Link>

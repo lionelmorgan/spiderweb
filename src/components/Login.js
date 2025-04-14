@@ -29,6 +29,7 @@ const Login = () => {
 
       if (user) {
         navigate('/home');
+        localStorage.setItem('currentUser', JSON.stringify(user)); // Save entire user object to localStorage
       } else {
         setError('Invalid username or password.');
       }

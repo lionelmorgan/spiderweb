@@ -1,7 +1,9 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import './Users.css'; 
 
 const Users = () => {
+
   function navigateToProfile(){
     //function to navigate to user's profile by username
     //add onClick attribute and assign navigateToProfile
