@@ -13,10 +13,12 @@ const Navigation = ({ username }) => {
 
   const toggleDropdown = () => {
     setDropdownVisible(!dropdownVisible);
+    console.log("drop is visible");
   };
 
   const handleDropdownClose = () => {
     setDropdownVisible(false);
+    console.log("The handleDropdownClose function was trigger: const handleDropdownClose = ()")
   };
 
   const currentUser = JSON.parse(localStorage.getItem('currentUser'));

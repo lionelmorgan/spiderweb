@@ -9,7 +9,7 @@ const AddPost = () => {
 
     const [description, setDescription] = useState('');
     const [image, setImage] = useState(null);
-    const [preview, setPreview] = useState(null); 
+    const [preview, setPreview] = useState(null);
 
     const handleImageChange = (e) => {
         const file = e.target.files[0];
@@ -32,7 +32,6 @@ const AddPost = () => {
         formData.append('image', image);
         formData.append('username', currentUser.username);
         formData.append('profile', currentUser.profile);
-
         try {
             const response = await fetch('http://localhost:5000/add-post', {
                 method: 'POST',
@@ -46,25 +45,24 @@ const AddPost = () => {
             const data = await response.json();
             console.log('Post added successfully:', data);
 
-            // Reset form
-            setDescription('');
-            setImage(null);
-            setPreview(null); 
-
-            // Navigate to Home page once post is successfully added
-            navigate('/home');
-        } catch (error) {
-            console.error('Error:', error);
-        }
-    };
-
-    return (
+             // Reset form
+             setDescription('');
+             setImage(null);
+             setPreview(null);
+ 
+             // Navigate to Home page once post is successfully added
+             navigate('/home');
+         } catch (error) {
+             console.error('Error:', error);
+         }
+     };
+     return (
         <div>
             <Navigation />
             <div className="add-post-container">
                 <h2>Add a New Post</h2>
                 <form onSubmit={handleSubmit} className="add-post-form">
-                    <div className="input-group">
+                <div className="input-group">
                         <label htmlFor="description">Description</label>
                         <textarea
                             id="description"
@@ -72,32 +70,29 @@ const AddPost = () => {
                             onChange={(e) => setDescription(e.target.value)}
                             required
                         />
-                    </div>
-
-                    <div className="input-group">
+</div>
+<div className="input-group">
                         <label htmlFor="image">Upload Image</label>
                         <input
                             type="file"
                             id="image"
                             onChange={handleImageChange}
                             accept="image/*"
-                            required
-                        />
-                    </div>
-
-                    {/* Show the preview image*/}
-                    {preview && (
+                            required/>
+  </div>
+    {/* Show the preview image*/}
+    {preview && (
                         <div className="image-preview">
                             <p>Image Preview:</p>
                             <img src={preview} alt="Preview" className="preview-img" />
                         </div>
                     )}
 
-                    <button type="submit" className="submit-btn">Submit Post</button>
+<button type="submit" className="submit-btn">Submit Post</button>
                 </form>
             </div>
         </div>
     );
 };
 
-export default AddPost;
+export default AddPost; 

@@ -6,6 +6,7 @@ import Profile from './components/Profile';
 import Explore from './components/Explore';
 import AddPost from './components/AddPost';
 import ChatRoom from './components/ChatRoom';
+import SignUp from './components/SignUp';
 import './App.css';
 
 function App() {
@@ -14,6 +15,7 @@ function App() {
       <div>
         <Routes>
           <Route path="/" element={<Login/>} />
+          <Route path="/signup" element={<SignUp/>} />
           <Route path="/home" element={<Home />} />
           <Route path="/Profile" element={<Profile />} />
           <Route path="/Explore" element={<Explore />} />

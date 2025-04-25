@@ -35,7 +35,7 @@ const Profile = () => {
                     <p><strong><i>{currentUser.username}</i></strong></p>
                 </div>
                 <div id="bio">
-                    <p><strong><i>Denver Broncos fan 🐎. Nature adventures ⛰️</i></strong></p>
+                    <p><strong><i>{currentUser.bio}</i></strong></p>
                 </div>
                 <div className="posts">
                     {userPosts.length > 0 ? (

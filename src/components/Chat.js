@@ -1,10 +1,17 @@
 import React, { useEffect, useState } from "react";
 import ScrollToBottom from "react-scroll-to-bottom";
-import Navigation from "./Navigation";
 
 function Chat({ socket, username, room }) {
   const [currentMessage, setCurrentMessage] = useState("");
   const [messageList, setMessageList] = useState([]);
+
+  const getCurrentTime = () => {
+    return new Date().toLocaleTimeString([], {
+      hour: '2-digit',
+      minute: '2-digit',
+    });
+  };
+  
 
   const sendMessage = async () => {
     if (currentMessage !== "") {
@@ -12,27 +19,30 @@ function Chat({ socket, username, room }) {
         room: room,
         author: username,
         message: currentMessage,
-        time:
-          new Date(Date.now()).getHours() +
-          ":" +
-          new Date(Date.now()).getMinutes(),
+        time: getCurrentTime(),
       };
-
+  
       await socket.emit("send_message", messageData);
-      setMessageList((list) => [...list, messageData]);
       setCurrentMessage("");
     }
   };
+  
+  
 
   useEffect(() => {
-    socket.on("receive_message", (data) => {
+    const handleReceiveMessage = (data) => {
       setMessageList((list) => [...list, data]);
-    });
+    };
+  
+    socket.on("receive_message", handleReceiveMessage);
+  
+    return () => {
+      socket.off("receive_message", handleReceiveMessage);
+    };
   }, [socket]);
+  
 
   return (
-    <div>
-        <Navigation />
     <div className="chat-window">
       <div className="chat-header">
         <p>Live Chat</p>
@@ -73,7 +83,6 @@ function Chat({ socket, username, room }) {
         />
         <button onClick={sendMessage}>&#9658;</button>
       </div>
-    </div>
     </div>
   );
 }
