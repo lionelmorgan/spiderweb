@@ -1,44 +1,44 @@
 [
-    {
-      "username": "lionelmorgan",
-      "password": "password123",
-      "profile":"/images/8.jpg",
-      "bio": "Denver Broncos fan 🐎. Nature adventures ⛰️"
-    },
-    {
-      "username": "millieram",
-      "password": "helloworld",
-      "profile":"/images/1.jpg",
-      "bio": "Car guy, tech enthusiast 💻 "
-    },
-    {
-      "username": "daxfrenz",
-      "password": "dino456",
-      "profile":"/images/5.jpg",
-      "bio": "Car guy, tech enthusiast 💻 "
-    },
-    {
-      "username": "jstats",
-      "password": "asdfg235",
-      "profile":"/images/7.jpg",
-      "bio": "Football!"
-    },
-    {
-      "username": "ezy",
-      "password": "etoday123",
-      "profile":"/images/4.jpg",
-      "bio": "Nature fan, soccer player"
-    },
-    {
-      "username": "emwest",
-      "password": "qwerty345",
-      "profile":"/images/2.jpg",
-      "bio": "Bike rider, outdoor life "
-    },
-    {
-      "username": "chasezets",
-      "password": "carrots789",
-      "profile":"/images/6.jpg",
-      "bio": "Car guy, tech enthusiast 💻 "
-    }
-  ]
+  {
+    "username": "lionelmorgan",
+    "password": "password123",
+    "profile": "/images/8.jpg",
+    "bio": "Denver Broncos fan 🐎. Nature adventures ⛰️"
+  },
+  {
+    "username": "millieram",
+    "password": "helloworld",
+    "profile": "/images/1.jpg",
+    "bio": "Tech enthusiast 💻 "
+  },
+  {
+    "username": "daxfrenz",
+    "password": "dino456",
+    "profile": "/images/5.jpg",
+    "bio": "Car guy, tech enthusiast 💻 "
+  },
+  {
+    "username": "jstats",
+    "password": "asdfg235",
+    "profile": "/images/7.jpg",
+    "bio": "Football!"
+  },
+  {
+    "username": "ezy",
+    "password": "etoday123",
+    "profile": "/images/4.jpg",
+    "bio": "Nature fan, soccer player"
+  },
+  {
+    "username": "emwest",
+    "password": "qwerty345",
+    "profile": "/images/2.jpg",
+    "bio": "Bike rider, outdoor life "
+  },
+  {
+    "username": "chasezets",
+    "password": "carrots789",
+    "profile": "/images/6.jpg",
+    "bio": "Car guy, tech enthusiast 💻 "
+  }
+]

@@ -1,5 +1,6 @@
 import React, {useState} from "react";
 import './SignUp.css';
+import { useNavigate } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faSpider } from '@fortawesome/free-solid-svg-icons';
 
@@ -8,6 +9,8 @@ const SignUp = () => {
     const [password, setPassword] = useState('');
     const [profileImage, setProfileImage] = useState(null);
     const [bio, setBio] = useState('');
+    
+    const navigate = useNavigate();
 
     const handleSignUp = async (e) => {
         e.preventDefault();
@@ -41,6 +44,8 @@ const SignUp = () => {
             setPassword('');
             setProfileImage(null);
             setBio('');
+
+            navigate('/');
         }catch(error){
             console.log("Error:", error);
         }
@@ -75,8 +80,8 @@ const SignUp = () => {
                     type="file" 
                     placeholder="Upload Profile Image" 
                     required 
-                    accept="profileImage/*"
-                    onChange={(e) => setProfileImage(e.target.value)}>
+                    accept="image/*"
+                    onChange={(e) => setProfileImage(e.target.files[0])}>
                     </input>
                 </div>
                 <div>
