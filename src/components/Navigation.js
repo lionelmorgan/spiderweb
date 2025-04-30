@@ -4,7 +4,7 @@ import './Login';
 import { Link } from 'react-router-dom';
 import { useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faHouse, faUser, faArrowLeft, faMessage } from '@fortawesome/free-solid-svg-icons';
+import { faSpider, faHouse, faUser, faArrowLeft, faMessage } from '@fortawesome/free-solid-svg-icons';
 import { faSearchengin } from '@fortawesome/free-brands-svg-icons';
 
 
@@ -26,7 +26,7 @@ const Navigation = ({ username }) => {
   return (
     <nav className="navbar-spider">
       <div className="navbar-brand-spider">
-        <span id="nav-title"><b>SPIDER</b>WEB</span>
+      <a href="/home"  id="nav-title"><span><b><FontAwesomeIcon icon={faSpider}/> SPIDER</b>WEB</span></a>
       </div>
       <div className="navbar-toggle">
         <span>{currentUser.username}</span>

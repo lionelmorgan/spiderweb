@@ -40,5 +40,17 @@
     "password": "carrots789",
     "profile": "/images/6.jpg",
     "bio": "Car guy, tech enthusiast 💻 "
+  },
+  {
+    "username": "fhern",
+    "password": "test123",
+    "profile": "/images/1745592010491-11.jpg",
+    "bio": "Developer and gamer"
+  },
+  {
+    "username": "fhernz",
+    "password": "pass",
+    "profile": "/images/1745603969211-11.jpg",
+    "bio": "Rock climber"
   }
 ]

@@ -252,5 +252,39 @@
     "image": "/images/1745419491208-mar.jpg",
     "description": "test 4",
     "created": "just now"
+  },
+  {
+    "id": "12",
+    "user": {
+      "username": "fhern",
+      "profile": "/images/1745592010491-11.jpg"
+    },
+    "comments": [],
+    "likes": 0,
+    "image": "/images/1745592105221-MarvelBanner.jpg",
+    "description": "Hello!",
+    "created": "just now"
+  },
+  {
+    "id": "13",
+    "user": {
+      "username": "fhernz",
+      "profile": "/images/1745603969211-11.jpg"
+    },
+    "comments": [
+      {
+        "id": "1",
+        "user": {
+          "username": "lionelmorgan",
+          "profile": "/images/8.jpg"
+        },
+        "comment": "Test comment",
+        "created": "just now"
+      }
+    ],
+    "likes": 0,
+    "image": "/images/1745604050185-avengers.jpg",
+    "description": "Testing from Marvel",
+    "created": "just now"
   }
 ]
